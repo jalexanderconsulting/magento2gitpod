@@ -13,7 +13,7 @@ echo "percona-server-server-8.0 percona-server-server/re-root-pass password nem4
 echo "percona-server-server percona-server-server/default-auth-override select Use Legacy Authentication Method (Retain MySQL 5.x Compatibility)" | sudo debconf-set-selections
 
 # Install and upgrade Percona server packages
-sudo apt-get update
+sudo apt-get update -y
 sudo apt-get upgrade -y percona-server-server percona-server-client percona-server-common
 
 # Update MySQL configuration
