@@ -22,6 +22,9 @@ echo "percona-server-server-8.0 percona-server-server/root-pass password nem4540
 echo "percona-server-server-8.0 percona-server-server/re-root-pass password nem4540" | sudo debconf-set-selections
 echo "percona-server-server percona-server-server/default-auth-override select Use Legacy Authentication Method (Retain MySQL 5.x Compatibility)" | sudo debconf-set-selections
 
+#fix apparmor profile
+sudo rm -f /etc/apparmor.d/usr.sbin.mysqld
+
 # Install Percona server packages
 sudo apt-get install -y percona-server-server percona-server-client percona-server-common
 
