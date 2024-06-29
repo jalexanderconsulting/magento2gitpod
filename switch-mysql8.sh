@@ -7,7 +7,7 @@ sudo supervisorctl stop mysql
 
 # Temporarily move existing MySQL data directory
 if [ -d /workspace/magento2gitpod/mysql ]; then
-    sudo mv /workspace/magento2gitpod /workspace/magento2gitpod.bak
+    sudo mv /workspace/magento2gitpod/mysql /workspace/magento2gitpod/mysql.bak
 fi
 
 # Enable Percona release and import Google signing key
