@@ -61,7 +61,7 @@ RUN set -ex; \
 	} | sudo debconf-set-selections; \
 	sudo apt-get update; \
 	sudo apt-get install -y \
-		percona-server-server-5.7 percona-server-client-5.7 percona-server-common-5.7 \
+		percona-server-server-8.0 percona-server-client-8.0 percona-server-common-8.0 \
 	;
 	
 RUN sudo chown -R gitpod:gitpod /etc/mysql /var/run/mysqld /var/log/mysql /var/lib/mysql /var/lib/mysql-files /var/lib/mysql-keyring
